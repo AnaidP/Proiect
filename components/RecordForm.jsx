@@ -51,6 +51,27 @@ const RecordForm = (props) => {
             placeholder="Write your thoughts here..."
           ></textarea>
         </div>
+        <div>
+  <label
+    htmlFor="mealType"
+    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+  >
+    Meal Type
+  </label>
+  <select
+    id="mealType"
+    value={entry.mealType}
+    onChange={(e) => updateEntry("mealType", e.target.value)}
+    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+  >
+    <option value="Mic dejun">Mic dejun</option>
+    <option value="Prânz">Prânz</option>
+    <option value="Cină">Cină</option>
+    <option value="Desert">Desert</option>
+    <option value="Gustare">Gustare</option>
+  </select>
+</div>
+
         <div className="w-full flex justify-center gap-4">
             <button
             type="button"
